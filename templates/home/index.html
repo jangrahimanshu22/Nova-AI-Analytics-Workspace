@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA — Ask Your Data. Get the Answer.</title>
+  <meta name="description" content="NOVA is a fictional AI analytics workspace designed to turn business data into clearer insights and decisions.">
+  <meta property="og:title" content="NOVA — Ask Your Data. Get the Answer.">
+  <meta property="og:description" content="AI analytics for clearer decisions.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#top" aria-label="NOVA home"><span class="logo-mark">N</span>NOVA</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Open menu</span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#product">Product</a><a href="#solutions">Solutions</a><a href="#insights">Insights</a><a href="#pricing">Pricing</a>
+        <div class="nav-actions"><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode"><span aria-hidden="true">☾</span><span class="theme-toggle-label">Dark</span></button><button class="sign-in" type="button" data-modal-open="access-modal">Sign in</button><button class="button button-small deploy-button" type="button" data-modal-open="deploy-modal">Deploy <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> AI analytics workspace</p>
+          <h1>Ask your data.<br><em>Get the answer.</em></h1>
+          <p class="hero-description">Turn complex business data into clear insights, beautiful visualizations, and decisions you can act on.</p>
+          <div class="hero-actions"><a class="button" href="#demo">Start exploring <span aria-hidden="true">↗</span></a><a class="text-button" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a></div>
+          <p class="trust-line"><span class="check">✓</span> Built for teams that make decisions from data.</p>
+        </div>
+        <div class="dashboard-wrap reveal" id="product" aria-label="NOVA analytics dashboard showing product demonstration data">
+          <div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div>
+          <div class="dashboard hero-dashboard">
+            <div class="dash-topbar"><div><p class="dash-overline">WORKSPACE / OVERVIEW</p><h2>Good morning, Maya <span>✦</span></h2></div><div class="demo-pill"><i></i> Demo workspace</div></div>
+            <div class="metric-grid">
+              <article class="metric-card"><div class="metric-label"><span>Revenue</span><span class="metric-icon violet">↗</span></div><strong>₹2.84M</strong><p><b>+18.4%</b> vs. last month</p></article>
+              <article class="metric-card"><div class="metric-label"><span>Orders</span><span class="metric-icon blue">□</span></div><strong>18,429</strong><p><b>+12.8%</b> vs. last month</p></article>
+              <article class="metric-card"><div class="metric-label"><span>Conversion</span><span class="metric-icon orange">◌</span></div><strong>6.42%</strong><p><b>+2.1%</b> vs. last month</p></article>
+            </div>
+            <div class="dash-content"><article class="chart-panel"><div class="panel-heading"><div><p>PERFORMANCE</p><h3>Revenue trend</h3></div><button class="period-button" type="button">Last 7 months <span>⌄</span></button></div><div class="chart-holder"><canvas id="heroChart" aria-label="Revenue product demonstration chart" role="img"></canvas></div><p class="chart-note">Illustrative product demonstration data</p></article><aside class="insight-card" id="insights"><div class="insight-icon">✦</div><p class="insight-label">AI INSIGHT</p><h3>Enterprise momentum is building.</h3><p>Revenue growth is primarily driven by stronger Enterprise customer activity this month.</p><button class="insight-link" type="button" data-modal-open="insight-modal">Explore insight <span aria-hidden="true">→</span></button><div class="insight-spark"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></aside></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section" id="how-it-works"><div class="container"><div class="section-intro centered reveal"><p class="eyebrow"><span></span> A clearer path forward</p><h2>From raw data to <em>clear decisions.</em></h2><p>Give every team a shared understanding of what is happening and what to do next.</p></div><div class="steps"><article class="step reveal"><span class="step-number">01</span><div class="step-visual connect-visual"><i></i><i></i><i></i></div><h3>Connect</h3><p>Bring your business data together.</p></article><article class="step reveal"><span class="step-number">02</span><div class="step-visual understand-visual"><i></i><i></i><i></i><i></i></div><h3>Understand</h3><p>NOVA identifies patterns and explains what matters.</p></article><article class="step reveal"><span class="step-number">03</span><div class="step-visual act-visual"><i>✦</i></div><h3>Act</h3><p>Turn insights into confident decisions.</p></article></div></div></section>
+
+    <section class="features section" id="solutions"><div class="container"><div class="feature-heading reveal"><div><p class="eyebrow"><span></span> Built for clarity</p><h2>Analytics that move<br>work <em>forward.</em></h2></div><p>Powerful enough to reveal the signal in your data, simple enough for the whole team to use.</p></div><div class="feature-grid"><article class="feature-card feature-main reveal"><div class="feature-window"><div class="mini-top"><span></span><span></span><span></span><b>Ask NOVA</b></div><p class="query">Why did revenue grow in July?</p><div class="answer"><span>✦</span><p>Enterprise expansion and a higher conversion rate accounted for most of the uplift.</p></div></div><h3>AI-Powered Insights</h3><p>Understand what changed and why.</p></article><article class="feature-card reveal"><span class="feature-symbol chart-symbol">⌁</span><h3>Interactive Analytics</h3><p>Explore trends instead of reading static reports.</p></article><article class="feature-card reveal"><span class="feature-symbol prompt-symbol">⌘</span><h3>Natural Language Questions</h3><p>Ask business questions in plain language.</p></article><article class="feature-card reveal"><span class="feature-symbol report-symbol">↗</span><h3>Decision-Ready Reports</h3><p>Turn analysis into information your team can use.</p></article></div></div></section>
+
+    <section class="demo section" id="demo"><div class="container demo-layout"><div class="demo-copy reveal"><p class="eyebrow"><span></span> Explore the workspace</p><h2>Make your next<br>question a <em>better one.</em></h2><p>Switch perspectives to see how NOVA makes the important parts of your business easier to spot.</p><div class="demo-tabs" role="tablist" aria-label="Demo metrics"><button role="tab" id="tab-revenue" aria-selected="true" aria-controls="demo-panel" data-series="revenue">Revenue</button><button role="tab" id="tab-customers" aria-selected="false" aria-controls="demo-panel" data-series="customers">Customers</button><button role="tab" id="tab-orders" aria-selected="false" aria-controls="demo-panel" data-series="orders">Orders</button></div><a class="text-button" href="#footer">Discover NOVA <span aria-hidden="true">→</span></a></div><div class="demo-dashboard reveal" id="demo-panel" role="tabpanel" aria-labelledby="tab-revenue"><div class="demo-head"><div><p id="demoDescription">Monthly revenue trend</p><strong id="demoSummary">₹2.84M</strong></div><span id="demoChange">+18.4%</span></div><div class="demo-chart-holder"><canvas id="demoChart" aria-label="Interactive product demonstration chart" role="img"></canvas></div><div class="demo-footer"><span><i></i> Product demo data</span><span id="demoLabel">Revenue (₹)</span></div></div></div></section>
+
+    <section class="closing" id="pricing"><div class="container reveal"><p class="eyebrow"><span></span> Your data, made useful</p><h2>Clarity is a competitive<br><em>advantage.</em></h2><p class="cta-note">Explore the product demonstration workspace — no signup or pricing claim required.</p><a class="button button-light" href="#demo">Start exploring <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer id="footer"><div class="container footer-grid"><div><a class="logo" href="#top"><span class="logo-mark">N</span>NOVA</a><p>AI analytics for clearer decisions.</p></div><div class="footer-links"><div><p>Product</p><a href="#product">Overview</a><a href="#demo">Interactive demo</a></div><div><p>Explore</p><a href="#solutions">Solutions</a><a href="#insights">Insights</a><a href="#pricing">Pricing</a></div><div><p>Company</p><a href="#footer">Privacy</a><a href="#footer">Terms</a></div></div></div><div class="container copyright">© {% now "Y" %} NOVA. A fictional product demonstration.</div></footer>
+  <div class="modal" id="access-modal" role="dialog" aria-modal="true" aria-labelledby="access-title" aria-hidden="true"><div class="modal-backdrop" data-modal-close></div><div class="modal-card" role="document"><button class="modal-close" type="button" data-modal-close aria-label="Close demo access">×</button><p class="eyebrow"><span></span> Demo access</p><h2 id="access-title">Welcome to NOVA</h2><p>Explore the fictional product workspace.</p><label for="demo-email">Email</label><input id="demo-email" type="email" value="demo@nova.ai" readonly><label for="demo-password">Password</label><input id="demo-password" type="password" value="demoaccess" readonly><a class="button modal-action" href="#demo" data-modal-workspace>Enter Demo Workspace <span aria-hidden="true">→</span></a><small>Demo access — no account required.</small></div></div>
+  <div class="modal" id="insight-modal" role="dialog" aria-modal="true" aria-labelledby="insight-title" aria-hidden="true"><div class="modal-backdrop" data-modal-close></div><div class="modal-card insight-modal-card" role="document"><button class="modal-close" type="button" data-modal-close aria-label="Close AI insight">×</button><div class="modal-insight-icon">✦</div><p class="eyebrow"><span></span> Demo AI insight</p><h2 id="insight-title">Enterprise momentum is building.</h2><p>Enterprise customers contributed the largest share of recent revenue growth. The strongest increase occurred during the most recent reporting period.</p><button class="button modal-action" type="button" data-modal-close>Close insight</button><small>Fictional product demonstration content.</small></div></div>
+  {{ demo_series|json_script:"demo-series-data" }}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+  <script src="{% static 'js/main.js' %}" defer></script>
+</body>
+</html>
